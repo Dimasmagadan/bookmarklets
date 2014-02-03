@@ -33,11 +33,11 @@
 					r=r+'<a href="http://'+u.replace('scroll', window.location.host )+'">'+u.replace('scroll/', '' )+'</a><br/>';
 				}
 				console.log(r);
-				jQuery("body").append('<div class="allProdaList" style="background-color:rgb(190,111,98);display:block;left:50%;position:fixed;top:30px;width:300px;margin-left:158px;padding:8px;text-align:left;color:#fff">'+r+'</div>');
+				jQuery("body").append('<div style="background-color: rgb(190, 111, 98); display: block; color: rgb(255, 255, 255); height: 300px; overflow-y: scroll; font-size: 10px; line-height: 16px; box-shadow: -3px 0px 10px rgb(0, 0, 0); width: 300px; top: 10px; text-align: left; right: 10px; position: fixed; padding: 8px;" class="allProdaList">'+r+'</div>');
 				return false;
 			});
-			jQuery("body").append('<a href="#" class="nextProda" style="background-color:rgb(190,111,98);display:block;left:0;position:fixed;top:10px;width:90px;padding:8px;text-align:center;color:#fff;border-radius:0 10px 10px 0">Продолжить чтение</a>');
-			jQuery("body").append('<div style="background-color: rgb(190, 111, 98); display: block; color: rgb(255, 255, 255); height: 300px; overflow-y: scroll; font-size: 10px; line-height: 16px; box-shadow: -3px 0px 10px rgb(0, 0, 0); width: 300px; top: 10px; text-align: left; right: 10px; position: fixed; padding: 8px;" class="allProdaList">список</div>');
+			jQuery("body").append('<a href="#" class="nextProda" style="background-color:rgb(190,111,98);display:block;left:0;position:fixed;top:30px;width:90px;padding:8px;text-align:center;color:#fff;border-radius:0 10px 10px 0">Продолжить чтение</a>');
+			jQuery("body").append('<a href="#" class="allProda" style="background-color:rgb(190,111,98);display:block;left:0;position:fixed;top:0;width:90px;padding:8px;text-align:center;color:#fff;border-radius:0 10px 10px 0">список</a>');
 			jQuery(window).scroll(function(){
 				if(typeof(localStorage)!='undefined'){
 					if(jQuery(".nextProda").length>0){
